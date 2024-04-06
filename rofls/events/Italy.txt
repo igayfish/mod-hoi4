@@ -1,0 +1,26 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = italy
+
+# Albania Yields
+country_event = {
+	id = italy.800
+	title = italy.800.t
+	desc = italy.800.d
+	picture = GFX_report_event_royal_parade
+
+	trigger = {
+		date > 1936.1.20
+		tag = ITA
+	}
+	option =  {
+		name = ital.1
+		annex_country = {target = YUG}
+
+	}
+}
+
+
+
