@@ -66,8 +66,10 @@ focus = {
 		prerequisite = {focus = ITA_diplomacy2}
 		prerequisite = {focus = ITA_diplomacy1}
 		prerequisite = {focus = ITA_diplomacy3}
-		icon = 
-		cost = 5
+		icon = GFX_focus_ITA_banda_carita
+		x = 13
+		y = 4
+        cost = 5
 		x = 13
 		y = 4
 		completion_reward = {
