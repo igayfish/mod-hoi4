@@ -1,0 +1,23 @@
+ideas = {
+
+country = {
+	ideas40 = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+		picture = tfv_can_conscription_crisis
+
+		modifier = {
+			consumer_goods_factor = -0.1
+			army_org_factor = -0.05
+		}
+	}
+  }
+}
