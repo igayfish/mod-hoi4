@@ -1,0 +1,83 @@
+focus_tree - {
+
+}
+	id = ita_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+
+defult = no
+
+focus = {
+	id = ITA_diplomacy
+	icon = GFX_focus_ITA_capo_supremo
+	x = 13
+	y = 2
+	cost = 5
+	completion_reward = {
+	add_political_power = 100
+	country_event = italy.800
+	}
+}
+
+    focus = {
+        id = ITA_diplomacy1
+		prerequisite = {focus = ITA_diplomacy}
+        icon = 	GFX_focus_generic_tank_production
+        cost = 5
+        x = 11
+        y = 3
+		completion_reward = {
+			country_event = italy.70
+		}
+		
+    }
+
+	focus = {
+		id = ITA_diplomacy2
+		prerequisite = {focus = ITA_diplomacy}
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 5
+		x = 15
+		y = 3
+		completion_reward = {
+			country_event = italy.71
+		}
+	}
+
+
+	focus = {
+		id = ITA_diplomacy3
+		prerequisite = {focus = ITA_diplomacy}
+		icon = GFX_focus_ITA_a_colonial_empire
+		cost = 5
+		x = 13
+		y = 3
+		completion_reward = {
+			country_event = italy.72
+		}
+	}
+
+	focus = {
+		id = ITA_diplomacy4
+		prerequisite = {focus = ITA_diplomacy2}
+		prerequisite = {focus = ITA_diplomacy1}
+		prerequisite = {focus = ITA_diplomacy3}
+		icon = GFX_focus_ITA_banda_carita
+		x = 13
+		y = 4
+        cost = 5
+		x = 13
+		y = 4
+		completion_reward = {
+			country_event = italy.73
+			hidden_effect = {
+			load_focus_tree = italll
+		}
+	}
+
+}	
