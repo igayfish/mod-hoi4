@@ -1,0 +1,744 @@
+#	Example:
+#
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+###################################
+
+### ### #  # ###  ##  ###  ###  ##
+#    #  #  #  #  #  # #  #  #  #  #
+##   #  ####  #  #  # ###   #  ####
+#    #  #  #  #  #  # #     #  #  #
+###  #  #  # ###  ##  #    ### #  #
+
+###################################
+
+###### COUNTRY MODIFIERS
+
+# Army Modifiers
+ETH_army_1_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_army
+
+	max_dig_in = ETH_army_max_dig_in_factor # $MODIFIER_MAX_DIG_IN$
+	dig_in_speed_factor = ETH_army_dig_in_speed_factor # &MODIFIER_DIG_IN_SPEED_FACTOR$
+	experience_gain_army_factor = ETH_army_experience_gain_army_factor
+	# experience_loss_factor = ETH_army_experience_loss_factor # TODO_TA re-apply or remove
+	army_defence_factor = ETH_army_army_defence_factor
+	army_org_factor = ETH_army_army_org_factor # $MODIFIER_ARMY_ORG_FACTOR$
+
+	modifier_army_sub_unit_infantry_attack_factor = ETH_army_modifier_army_sub_unit_infantry_attack_factor
+	modifier_army_sub_unit_infantry_defence_factor = ETH_army_modifier_army_sub_unit_infantry_defence_factor
+	modifier_army_sub_unit_infantry_speed_factor = 	ETH_army_modifier_army_sub_unit_infantry_speed_factor
+
+	modifier_army_sub_unit_irregular_infantry_attack_factor = ETH_army_modifier_army_sub_unit_irregular_infantry_attack_factor
+	supply_consumption_factor = ETH_army_supply_consumption_factor
+
+	# later stuff
+	cas_damage_reduction = ETH_army_cas_damage_reduction
+	equipment_capture_factor = ETH_army_equipment_capture_factor
+
+	modifier_army_sub_unit_irregular_infantry_defence_factor = ETH_modifier_army_sub_unit_irregular_infantry_defence_factor
+	modifier_army_sub_unit_irregular_infantry_speed_factor = ETH_modifier_army_sub_unit_irregular_infantry_speed_factor
+	modifier_army_sub_unit_irregular_infantry_max_org_factor = ETH_modifier_army_sub_unit_irregular_infantry_max_org_factor
+
+}
+ETH_army_2_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_army_2
+
+	max_dig_in = ETH_army_max_dig_in_factor
+	dig_in_speed_factor = ETH_army_dig_in_speed_factor
+	experience_gain_army_factor = ETH_army_experience_gain_army_factor
+	# experience_loss_factor = ETH_army_experience_loss_factor # TODO_TA re-apply or remove
+	army_defence_factor = ETH_army_army_defence_factor
+	army_org_factor = ETH_army_army_org_factor
+	modifier_army_sub_unit_infantry_attack_factor = ETH_army_modifier_army_sub_unit_infantry_attack_factor
+	modifier_army_sub_unit_infantry_defence_factor = ETH_army_modifier_army_sub_unit_infantry_defence_factor
+	modifier_army_sub_unit_infantry_speed_factor = 	ETH_army_modifier_army_sub_unit_infantry_speed_factor
+	
+
+	modifier_army_sub_unit_irregular_infantry_attack_factor = ETH_army_modifier_army_sub_unit_irregular_infantry_attack_factor
+	supply_consumption_factor = ETH_army_supply_consumption_factor
+
+	# later stuff
+	cas_damage_reduction = ETH_army_cas_damage_reduction
+	equipment_capture_factor = ETH_army_equipment_capture_factor
+
+	modifier_army_sub_unit_irregular_infantry_defence_factor = ETH_modifier_army_sub_unit_irregular_infantry_defence_factor
+	modifier_army_sub_unit_irregular_infantry_speed_factor = ETH_modifier_army_sub_unit_irregular_infantry_speed_factor
+	modifier_army_sub_unit_irregular_infantry_max_org_factor = ETH_modifier_army_sub_unit_irregular_infantry_max_org_factor
+
+}
+ETH_army_3_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_army_3
+
+	max_dig_in = ETH_army_max_dig_in_factor
+	dig_in_speed_factor = ETH_army_dig_in_speed_factor
+	experience_gain_army_factor = ETH_army_experience_gain_army_factor
+	# experience_loss_factor = ETH_army_experience_loss_factor # TODO_TA re-apply or remove
+	army_defence_factor = ETH_army_army_defence_factor
+	army_org_factor = ETH_army_army_org_factor
+	modifier_army_sub_unit_infantry_attack_factor = ETH_army_modifier_army_sub_unit_infantry_attack_factor
+	modifier_army_sub_unit_infantry_defence_factor = ETH_army_modifier_army_sub_unit_infantry_defence_factor
+	modifier_army_sub_unit_infantry_speed_factor = 	ETH_army_modifier_army_sub_unit_infantry_speed_factor
+
+
+	modifier_army_sub_unit_irregular_infantry_attack_factor = ETH_army_modifier_army_sub_unit_irregular_infantry_attack_factor
+	supply_consumption_factor = ETH_army_supply_consumption_factor
+
+	# later stuff
+	cas_damage_reduction = ETH_army_cas_damage_reduction
+	equipment_capture_factor = ETH_army_equipment_capture_factor
+
+	modifier_army_sub_unit_irregular_infantry_defence_factor = ETH_modifier_army_sub_unit_irregular_infantry_defence_factor
+	modifier_army_sub_unit_irregular_infantry_speed_factor = ETH_modifier_army_sub_unit_irregular_infantry_speed_factor
+	modifier_army_sub_unit_irregular_infantry_max_org_factor = ETH_modifier_army_sub_unit_irregular_infantry_max_org_factor
+}
+
+
+# Navy Modifiers
+ETH_navy_1_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_navy
+
+	#INITIAL
+	# naval_coordination = ETH_navy_naval_coordination # TODO_TA re-apply or remove
+	# screening_efficiency = ETH_navy_screening_efficiency # TODO_TA re-apply or remove
+	repair_speed_factor = ETH_navy_repair_speed_factor
+	naval_doctrine_cost_factor = ETH_navy_naval_doctrine_cost_factor
+	refit_ic_cost = ETH_navy_refit_ic_cost
+}
+
+# Navy Modifiers
+ETH_navy_2_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_navy_2
+
+	#INITIAL
+	# naval_coordination = ETH_navy_naval_coordination # TODO_TA re-apply or remove
+	# screening_efficiency = ETH_navy_screening_efficiency # TODO_TA re-apply or remove
+	repair_speed_factor = ETH_navy_repair_speed_factor
+	naval_doctrine_cost_factor = ETH_navy_naval_doctrine_cost_factor
+	refit_ic_cost = ETH_navy_refit_ic_cost
+}
+
+# Navy Modifiers
+ETH_navy_3_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_navy_3
+
+	#INITIAL
+	# naval_coordination = ETH_navy_naval_coordination # TODO_TA re-apply or remove
+	# screening_efficiency = ETH_navy_screening_efficiency # TODO_TA re-apply or remove
+	repair_speed_factor = ETH_navy_repair_speed_factor
+	naval_doctrine_cost_factor = ETH_navy_naval_doctrine_cost_factor
+	refit_ic_cost = ETH_navy_refit_ic_cost
+}
+
+
+
+# Air Modifiers
+ETH_airforce_1_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_airforce
+
+	#INITIAL
+	enemy_army_bonus_air_superiority_factor = ETH_airforce_enemy_army_bonus_air_superiority_factor
+	air_doctrine_cost_factor = ETH_airforce_air_doctrine_cost_factor
+	air_accidents_factor = ETH_airforce_air_accidents_factor
+	air_attack_factor = ETH_airforce_air_attack_factor
+}
+
+ETH_airforce_2_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_airforce
+
+	#INITIAL
+	enemy_army_bonus_air_superiority_factor = ETH_airforce_enemy_army_bonus_air_superiority_factor
+	air_doctrine_cost_factor = ETH_airforce_air_doctrine_cost_factor
+	air_accidents_factor = ETH_airforce_air_accidents_factor
+	air_attack_factor = ETH_airforce_air_attack_factor
+}
+
+ETH_airforce_3_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_airforce
+
+	#INITIAL
+	enemy_army_bonus_air_superiority_factor = ETH_airforce_enemy_army_bonus_air_superiority_factor
+	air_doctrine_cost_factor = ETH_airforce_air_doctrine_cost_factor
+	air_accidents_factor = ETH_airforce_air_accidents_factor
+	air_attack_factor = ETH_airforce_air_attack_factor
+}
+
+# Corrupt Bureaucracy
+ETH_corrupt_bureaucracy_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_corrupt_bureaucracy
+	research_speed_factor = ETH_bureaucracy_research_speed_factor # $MODIFIER_RESEARCH_SPEED_FACTOR$
+	production_speed_buildings_factor = ETH_bureaucracy_production_speed_buildings_factor # $MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$
+	production_factory_max_efficiency_factor = ETH_bureaucracy_production_factory_max_efficiency_factor # $MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$
+
+}
+
+# Industrialization
+ETH_industrialization_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_man_five_year_plan_industry
+	industrial_capacity_dockyard = ETH_industrialization_industrial_capacity_dockyard # $MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$
+	industrial_capacity_factory = ETH_industrialization_industrial_capacity_factory # $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$
+	line_change_production_efficiency_factor = ETH_industrialization_line_change_production_efficiency_factor # $MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$
+	consumer_goods_factor = ETH_industrialization_consumer_goods_factor # $MODIFIER_CONSUMER_GOODS_FACTOR$
+
+	# Later
+	industry_air_damage_factor = ETH_industrialization_industry_air_damage_factor # $MODIFIER_INDUSTRY_AIR_DAMAGE_FACTOR@
+	industry_repair_factor = ETH_industrialization_industry_repair_factor # $MODIFIER_INDUSTRY_REPAIR_FACTOR$
+	production_factory_max_efficiency_factor = ETH_production_factory_max_efficiency_factor # $MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$
+
+	air_equipment_upgrade_xp_cost = ETH_air_equipment_upgrade_xp_cost # $MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$
+	land_equipment_upgrade_xp_cost = ETH_land_equipment_upgrade_xp_cost # $MODIFIER_LAND_EQUIPMENT_UPGRADE_XP_COST$
+
+	production_speed_buildings_factor = ETH_production_speed_buildings_factor # $MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$
+}
+
+
+# International Red Cross
+ETH_international_red_cross_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ETH_international_red_cross
+
+	army_morale_factor = ETH_irc_morale_factor
+	enemy_army_bonus_air_superiority_factor = ETH_irc_enemy_army_bonus_air_superiority_factor
+
+	# from communist branch
+	industry_repair_factor = ETH_communist_factory_repair_factor # $MODIFIER_INDUSTRY_REPAIR_FACTOR$
+
+}
+
+#### STATE MODIDIFERS
+ETH_state_development_dynamic_modifier = { #STATE MODIFIER
+	enable = { always = yes }
+	icon = GFX_modifiers_ETH_state_development
+	state_production_speed_buildings_factor = ETH_state_development_production_speed # $MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR$
+	local_building_slots_factor = ETH_state_development_local_building_slots_factor # $MODIFIER_LOCAL_BUILDING_SLOTS$
+
+
+	# Later
+	local_factories = ETH_state_development_local_factories
+	state_resources_factor = ETH_state_development_state_resources_factor
+
+}
+
+ETH_state_decentralization_dynamic_modifier = {
+	enable = { always = yes  }
+	remove_trigger = {
+		ROOT = { 
+			NOT = {
+				OWNER = {
+					original_tag = ETH
+				}
+			} # ROOT refers to the state on which the modifier is added
+		}
+	}
+	icon = GFX_modifiers_ETH_state_decentralization
+	local_building_slots_factor = ETH_state_decentralization_building_slots
+	production_speed_infrastructure_factor = ETH.ETH_state_decentralization_infrastructure
+	state_resources_factor = ETH.ETH_state_decentralization_resources
+	army_defence_factor = ETH.ETH_state_decentralization_defence
+	army_attack_factor = ETH.ETH_state_decentralization_attack
+	recruitable_population_factor = ETH.ETH_state_decentralization_recruitable_population
+	army_speed_factor = ETH.ETH_state_decentralization_army_speed
+}
+
+ETH_state_local_offensive_dynamic_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_military_plans
+	army_attack_factor = 0.25
+	breakthrough_factor = 0.5
+}
+
+ETH_state_local_retreat_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_military_plans
+	army_attack_factor = -0.15
+	army_speed_factor = -0.25
+}
+
+ETH_state_last_stand_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_military_plans
+	army_core_defence_factor = 0.15
+	supply_consumption_factor = -0.25
+}
+
+ETH_arranged_expansion_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_ETH_arranged_territorial_expansion
+	custom_modifier_tooltip = ETH_arranged_expansion_modifier_tt
+}
+
+ETH_state_supporting_resistance_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_bul_macedonian_revolutionaries
+	resistance_damage_to_garrison = 0.15
+	resistance_activity = 0.2
+	resistance_growth = 0.5
+	resistance_target = 0.8
+	compliance_growth = -0.1
+}
+### African Union/Organization of Unity ###
+
+ETH_operative_modifier = {
+	enable = { always = yes}
+	operative_slot = 1
+}
+
+african_union_central_bank_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_chi_hyper_inflation4
+	stability_factor = org_africa_central_bank_stability_factor
+	#-0.05
+	production_speed_industrial_complex_factor = org_africa_central_bank_industrial_complex_factor
+	#-0.1
+	production_speed_infrastructure_factor = org_africa_central_bank_infrastructure_factor
+	#-0.1
+}
+
+african_union_executive_council_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_constitutional_guarantees
+	political_power_gain = -0.1
+	stability_factor = 0.05
+}
+
+african_union_defense_agreement_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_chi_army_corruption3
+	army_defence_factor = 0.1
+}
+
+
+###################################
+
+#### ########    ###    ##       ##    ##
+ ##     ##      ## ##   ##        ##  ##
+ ##     ##     ##   ##  ##         ####
+ ##     ##    ##     ## ##          ##
+ ##     ##    ######### ##          ##
+ ##     ##    ##     ## ##          ##
+####    ##    ##     ## ########    ##
+
+###################################
+
+
+###### COUNTRY MODIFIERS (NATIONAL SPIRITS) #####
+
+
+
+
+ITA_international_aid = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_goods_red_bonus
+
+	consumer_goods_factor = ITA_consumer_goods_from_leftist_aid
+}
+
+ITA_peace_keepers_of_europe = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_can_wartime_prices_and_trade_board
+
+	consumer_goods_factor = ITA_peace_keepers_consumer_goods_factor
+	war_support_factor = ITA_peace_keepers_war_support_factor
+	weekly_manpower = ITA_peace_keepers_weekly_manpower
+}
+
+###### STATE MODIFIERS #####
+
+ITA_italian_highways_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	state_production_speed_infrastructure_factor = 0.25
+}
+
+ITA_libyan_railway_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_railways
+
+	state_production_speed_rail_way_factor = 0.25
+	compliance_gain = 0.01
+}
+
+ITA_pacified_italian_east_africa_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_factory_worker_militias
+
+	state_production_speed_rail_way_factor = 0.1
+	state_production_speed_infrastructure_factor = 0.1
+	resistance_decay = 0.1
+}
+
+ITA_fronte_militare_clandestino_modifier = { #In a RSI state
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = { is_controlled_by = RDS } # ROOT refers to the state on which the modifier is added
+	}
+	icon = GFX_modifiers_SOV_invaders_must_die
+
+	#INITIAL (FRONTE MILITARE CLANDESTINO)
+	required_garrison_factor = 2.ITA_fronte_militare_clandestino_required_garrison_factor #0.15
+	resistance_growth_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_growth_on_our_occupied_states #0.1
+
+	#GAPPISTI
+	resistance_damage_to_garrison_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_damage_to_garrison_on_our_occupied_states #0.1
+	resistance_target_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_resistance_target_on_our_occupied_states #0.1
+
+	#PARTISAN REPUBLICS
+	compliance_growth_on_our_occupied_states = 2.ITA_fronte_militare_clandestino_compliance_growth_on_our_occupied_states #-0.1
+}
+
+ITA_cooperatives_for_intensive_exploitation_dm = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {
+			OR = {
+				NOT = { is_controlled_by = ITA }
+				controller = {
+					OR = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = GFX_modifiers_generic_supply
+
+	compliance_growth = 0.01
+	state_resources_factor = 0.2
+	local_supplies = 0.1
+}
+
+ITA_anti_colonialism_sentiment = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {	
+			OR = {
+				is_core_of = controller
+				controller = {
+					OR = {
+						NOT = { has_country_flag = ITA_refused_decolonization_flag }
+						capital_scope = {
+							is_on_continent = africa
+						}
+					}
+				}
+			}
+		}
+	}
+	icon = GFX_modifiers_bul_macedonian_revolutionaries
+
+	resistance_target = 0.15
+	resistance_damage_to_garrison = 0.15
+	local_factory_sabotage = 0.15
+	local_resources = -0.15
+}
+
+ITA_mafia_on_the_rise_no_lar = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {
+			is_controlled_by = ITA
+			controller = {
+				has_completed_focus = ITA_cooperate_with_the_mafia
+			}
+		}
+	}
+	icon = GFX_modifiers_ITA_mafia_on_the_rise
+
+	state_resources_factor = -0.15
+	local_supplies_for_controller = -0.15
+	state_production_speed_buildings_factor = -0.15
+	local_non_core_supply_impact_factor = 0.15
+}
+
+ITA_mafia_on_the_rise = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {
+			is_controlled_by = ITA
+			controller = {
+				has_completed_focus = ITA_cooperate_with_the_mafia
+			}
+		}
+	}
+	icon = GFX_modifiers_ITA_mafia_on_the_rise
+
+	local_intel_to_enemies = 0.25
+	state_resources_factor = -0.15
+	local_supplies_for_controller = -0.15
+	state_production_speed_buildings_factor = -0.15
+	enemy_operative_detection_chance_factor_over_occupied_tag = -0.15
+	local_non_core_supply_impact_factor = 0.15
+}
+
+ITA_established_mafia_no_lar = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {
+			NOT = { is_controlled_by = ITA }
+		}
+	}
+	icon = GFX_modifiers_ITA_established_mafia
+
+	state_resources_factor = 0.15
+	local_supplies_for_controller = 0.15
+	state_production_speed_buildings_factor = -0.10
+}
+
+ITA_established_mafia = {
+	enable = { always = yes }
+	remove_trigger = { # ROOT refers to the state on which the modifier is added
+		ROOT = {
+			NOT = { is_controlled_by = ITA }
+		}
+	}
+	icon = GFX_modifiers_ITA_established_mafia
+
+	local_intel_to_enemies = 0.15
+	state_resources_factor = 0.15
+	local_supplies_for_controller = 0.15
+	state_production_speed_buildings_factor = -0.10
+	enemy_operative_detection_chance_factor_over_occupied_tag = 0.15
+}
+
+ITA_novus_ordo_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_military_industry
+	local_non_core_manpower = 0.25
+	state_resources_factor = 0.15
+	compliance_growth = 0.1
+	resistance_decay = 0.05
+	state_production_speed_arms_factory_factor = 0.2
+	local_factories = 0.5
+}
+
+ITA_expanded_corporatism_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_fascist_corporatism
+	state_resources_factor = 0.1
+	local_factories = 0.2
+	local_supplies = 0.1
+	compliance_growth = 0.05
+}
+
+
+###################################################################################################
+###################################################################################################
+###################################################################################################
+
+ ######  ##      ## #### ######## ######## ######## ########  ##          ###    ##    ## ########
+##    ## ##  ##  ##  ##     ##         ##  ##       ##     ## ##         ## ##   ###   ## ##     ##
+##       ##  ##  ##  ##     ##        ##   ##       ##     ## ##        ##   ##  ####  ## ##     ##
+ ######  ##  ##  ##  ##     ##       ##    ######   ########  ##       ##     ## ## ## ## ##     ##
+      ## ##  ##  ##  ##     ##      ##     ##       ##   ##   ##       ######### ##  #### ##     ##
+##    ## ##  ##  ##  ##     ##     ##      ##       ##    ##  ##       ##     ## ##   ### ##     ##
+ ######   ###  ###  ####    ##    ######## ######## ##     ## ######## ##     ## ##    ## ########
+
+###################################################################################################
+###################################################################################################
+###################################################################################################
+
+SWI_dormant_citizen_militia = {
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			has_country_flag = SWI_militias_turned_into_regulars
+		}
+	}
+	icon = GFX_idea_prc_low_popular_support3
+	modifier_army_sub_unit_militia_attack_factor = -0.5
+	modifier_army_sub_unit_militia_defence_factor = -0.5
+	modifier_army_sub_unit_militia_speed_factor = -0.5
+	modifier_army_sub_unit_militia_max_org_factor = -0.5
+	modifier_army_sub_unit_militia_org_recovery_cap_factor = -0.7
+}
+
+SWI_active_citizen_militia = {
+	enable = { always = yes }
+	remove_trigger = {
+		ROOT = {
+			has_country_flag = SWI_militias_turned_into_regulars
+		}
+	}
+	icon = GFX_idea_generic_manpower_bonus
+
+	industrial_capacity_factory = SWI_citizen_militia_industrial_capacity_factory
+	industrial_capacity_dockyard = SWI_citizen_militia_industrial_capacity_dockyard
+	production_speed_buildings_factor = SWI_citizen_militia_production_speed_buildings_factor
+	training_time_factor = SWI_citizen_militia_training_time_factor
+	civilian_factory_use = SWI_citizen_militia_civ_factory_use
+
+}
+
+SWI_fake_active_citizen_militia_for_the_tooltip = { # I swear this is the last time I use Dynamic Modifiers
+	enable = { always = yes }
+	icon = GFX_idea_generic_manpower_bonus
+	industrial_capacity_factory = -0.1
+	industrial_capacity_dockyard = -0.1
+	production_speed_buildings_factor = -0.1
+	training_time_factor = 0.1
+	civilian_factory_use = 1
+
+}
+
+SWI_gold_trade_with_switzerland = {
+	enable = { 
+		NOT = {
+			has_war_with = SWI
+		}
+	}
+	icon = GFX_idea_SPR_seize_the_gold_reserves
+
+	consumer_goods_factor = SWI_gold_trade_consumer_goods_factor
+	production_speed_buildings_factor = SWI_gold_trade_building_speed_factor
+	research_speed_factor = SWI_gold_trade_research_speed_factor
+	production_lack_of_resource_penalty_factor = SWI_gold_trade_lack_of_resource_penalty_factor
+	production_factory_max_efficiency_factor = SWI_gold_trade_factory_max_efficiency_factor
+}
+
+SWI_swiss_gold_market = {
+	enable = { 
+		always = yes
+	 }
+	icon = GFX_idea_SPR_seize_the_gold_reserves
+
+	consumer_goods_factor = SWI_gold_trade_consumer_goods_factor
+	production_speed_buildings_factor = SWI_gold_trade_building_speed_factor
+	research_speed_factor = SWI_gold_trade_research_speed_factor
+	production_lack_of_resource_penalty_factor = SWI_gold_trade_lack_of_resource_penalty_factor
+	production_factory_max_efficiency_factor = SWI_gold_trade_factory_max_efficiency_factor
+}
+
+SWI_seized_gold = {
+	enable = { always = yes }
+	icon = GFX_idea_SPR_seize_the_gold_reserves
+
+	consumer_goods_factor = SWI_gold_seized_consumer_goods_factor
+	production_speed_buildings_factor = SWI_gold_seized_building_speed_factor
+	research_speed_factor = SWI_gold_seized_research_speed_factor
+	production_lack_of_resource_penalty_factor = SWI_gold_seized_lack_of_resource_penalty_factor
+	production_factory_max_efficiency_factor = SWI_gold_seized_factory_max_efficiency_factor
+}
+
+SWI_stole_our_gold_reserves = {
+	enable = { always = yes }
+	icon = GFX_idea_usa_great_depression_3
+
+	consumer_goods_factor = SWI_gold_seized_bad_consumer_goods_factor
+	production_speed_buildings_factor = SWI_gold_seized_bad_building_speed_factor
+	research_speed_factor = SWI_gold_seized_bad_research_speed_factor
+	production_lack_of_resource_penalty_factor = SWI_gold_seized_bad_lack_of_resource_penalty_factor
+	production_factory_max_efficiency_factor = SWI_gold_seized_bad_factory_max_efficiency_factor
+}
+
+#### State Modifiers ####
+
+SWI_attack_from_the_mountains = {
+	enable = { always = yes } 
+	army_attack_factor = 2
+	state_production_speed_bunker_factor = -0.35
+	icon = GFX_modifiers_generic_military_plans
+
+}
+
+SWI_frontier_defense = {
+	enable = { always = yes} 
+	icon = GFX_modifiers_SOV_invaders_must_die
+	army_defence_factor = 1.5
+}
+
+SWI_heer_und_haus_mod = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SWI_spiritual_resistance
+
+	resistance_activity =  0.3
+	resistance_growth = 0.2
+	resistance_decay = -0.3
+}
+
+SWI_Ortswehren_dynamic_mod = {
+	enable = { always = yes } 
+	icon = GFX_modifiers_generic_military_plans 
+
+	army_defence_factor = 0.25
+	land_reinforce_rate = 0.03
+	fortification_collateral_chance = -0.2
+	cas_damage_reduction = 0.1
+	max_dig_in_factor = 0.2
+
+}
+
+SWI_citizen_supply_mandate_mod = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans 
+
+	local_supplies = 0.5
+}
+
+SWI_alpine_redoubt_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+
+	army_defence_factor = 0.2
+	enemy_army_bonus_air_superiority_factor = -0.15
+	cas_damage_reduction = 0.1
+	state_production_speed_bunker_factor = 0.35
+	production_speed_anti_air_building_factor = 0.2
+}
+
+SWI_infrastructure_rigged_to_blow = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+
+	state_production_speed_buildings_factor = -0.15
+}
