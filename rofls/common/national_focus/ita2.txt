@@ -1,0 +1,69 @@
+focus_tree = {
+
+	id = italll
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ita
+		}
+	}
+	default = no
+	focus = {
+		id = itadip4
+		text = porajenie_v_efiopii
+		icon = GFX_focus_ARG_consolidating_power
+		cost = 10,00
+		x = 8
+		y = 0
+
+	}
+	focus = {
+		id = itadip5
+		text = voennoe_poilojonie
+		icon = GFX_focus_SWE_revoke_militia_law
+		cost = 10,00
+		prerequisite = {
+			focus = itadip4
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = itadip6
+		text = oncainye_meri
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		cost = 10,00
+		prerequisite = {
+			focus = itadip5
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = itadip7
+		text = stabilizatsiya_strany
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		cost = 10,00
+		prerequisite = {
+			focus = itadip6
+		}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = itadip8
+		text = arestpapi
+		icon = GFX_focus_ARG_state_atheism
+		cost = 10,00
+		prerequisite = {
+			focus = itadip6
+		}
+		x = 7
+		y = 3
+
+	}
+}
