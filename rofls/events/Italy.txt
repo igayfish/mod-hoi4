@@ -1,0 +1,91 @@
+﻿###########################
+# Italian Events
+###########################
+
+add_namespace = italy
+
+# politica italii
+country_event = {
+	id = italy.800
+	title = italy.800.t
+	desc = italy.800.d
+	picture = GFX_report_event_royal_parade
+
+	trigger = {
+		tag = ITA
+		has_completed_focus = ITA_diplomacy
+	}
+	option =  {
+		name = ital.1
+		add_war_support = -0.1
+		add_stability = -0.1
+
+	}
+}
+
+
+#resursi mobilizacia
+country_event = {
+	id = italy.70
+	title = italy.70.t
+	desc = italy.70.d
+	picture = GFX_report_event_physics_lab_02
+
+	trigger = {
+		tag = ITA
+		has_completed_focus = ITA_diplomacy1
+	}
+	option =  {
+		name = ital.70.1
+		add_stability = -0.05
+		add_offsite_building = { type = arms_factory level = 2 }
+		add_resource = {
+			type = steel
+			amount = 9
+			state = 117
+		}
+
+	}
+}
+
+country_event = {
+	id = italy.71
+	title = italy.71.t
+	desc = italy.71.d
+	picture = GFX_report_event_spr_italian_volunteers
+
+	trigger = {
+		tag = ITA
+		has_completed_focus = ITA_diplomacy2
+	}
+	option =  {
+		name = ital.71.1
+		add_war_support = -0.05
+		add_manpower = 125000
+	}
+}
+#   ####
+####   
+   ####
+####  #
+
+
+
+
+country_event = {
+	id = italy.72
+	title = italy.72.t
+	desc = italy.72.d
+	picture = GFX_report_event_SWE_defense_act
+
+	trigger = {
+		tag = ITA
+		has_completed_focus = ITA_diplomacy3
+	}
+	option =  {
+		name = ital.72.1
+		remove_ideas = ideas40
+		add_ideas = ideas70
+
+	}
+}
