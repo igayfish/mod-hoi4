@@ -1,0 +1,68 @@
+ideas = {
+    #МИЛИТАРИЗМ
+	country = {
+		jap_ideas1 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			picture = warrior_traditions_idea
+
+			modifier = {
+				planning_speed = 0.2
+				war_support_factor = 0.15
+				max_planning = 0.1
+				attrition = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = -0.15
+			}
+		}
+	}
+
+	#ЭКОНОМИЧЕСКИЙ СТАРТОВЫЙ
+
+	country = {
+		jap_ideas2 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = jap_zaibatsu
+
+			modifier = {
+				political_power_factor = 0.20
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+	}
+	
+    #НУ ТУПЫЕ
+
+	country = {
+		jap_ideas3 = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = jap_duplicate_research
+
+			modifier = {
+				research_speed_factor = -0.1
+			}
+		}
+	}
+}
