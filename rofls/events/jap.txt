@@ -9,8 +9,7 @@ country_event = {
 	id = japan.100
 	title = japan.100.t
 	desc = japan.100.d
-	picture = GFX_report_event_japanese_transport_soldiers
-
+	picture = GFX_report_event_test_event1
 	trigger = {
 		tag = JAP
 		has_completed_focus = jap_1
