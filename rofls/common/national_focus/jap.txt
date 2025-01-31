@@ -1,0 +1,72 @@
+focus_tree = {
+    id = japan_focus
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 20
+            tag = JAP
+        }
+    }
+
+
+    default = no
+
+    continuous_focus_position = { x = 20 y = 1200 }
+
+    focus = {
+        #ПОЛИТИКА ЯПОНИИ
+        id = jap_1
+        icon = GFX_focus_GER_befriend_japan
+        x = 7
+        y = 0
+        cost = 10
+        completion_reward = {
+            country_event = japan.1
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+    }
+
+    focus = {
+        #ПУТЬ ЯПОНСКОЙ ИМПЕРИИ
+        id = jap_2
+        icon = GFX_focus_GER_befriend_japan
+        x = 10
+        y = 1
+        cost = 10
+        prerequisite = {focus = jap_1}
+        mutually_exclusive = {
+			focus = jap_3
+		}
+        completion_reward = {
+            country_event = japan.2
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+    }
+
+    focus = {
+        #ПУТЬ ФАШИСТОВ
+        id = jap_3
+        icon = GFX_focus_GER_befriend_japan
+        x = 4
+        y = 1
+        cost = 10
+        prerequisite = {focus = jap_1}
+        mutually_exclusive = {
+			focus = jap_2
+		}
+        completion_reward = {
+            country_event = japan.3
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+    }
+}
