@@ -20,9 +20,9 @@ focus_tree = {
         icon = GFX_focus_GER_befriend_japan
         x = 7
         y = 0
-        cost = 10
+        cost = 5
         completion_reward = {
-            country_event = japan.1
+            country_event = japan.100
         }
 
         ai_will_do = {
@@ -36,19 +36,19 @@ focus_tree = {
         icon = GFX_focus_GER_befriend_japan
         x = 10
         y = 1
-        cost = 10
+        cost = 5
         prerequisite = {focus = jap_1}
         mutually_exclusive = {
-			focus = jap_3
-		}
+            focus = jap_3
+        }
         completion_reward = {
-            country_event = japan.2
+            country_event = japan.101
         }
 
         ai_will_do = {
             factor = 2
         }
-    }
+        }
 
     focus = {
         #ПУТЬ ФАШИСТОВ
@@ -56,17 +56,139 @@ focus_tree = {
         icon = GFX_focus_GER_befriend_japan
         x = 4
         y = 1
-        cost = 10
+        cost = 5
         prerequisite = {focus = jap_1}
         mutually_exclusive = {
-			focus = jap_2
-		}
+            focus = jap_2
+        }
         completion_reward = {
-            country_event = japan.3
+            country_event = japan.102
         }
 
         ai_will_do = {
             factor = 2
         }
-    }
+        }
+
+    focus = {
+        #Дзайбацу
+        id = jap_4
+        icon = GFX_focus_jap_zaibatsu
+        x = 0
+        y = 2
+        cost = 5
+        prerequisite = {focus = jap_3}
+        completion_reward = {
+        
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Национализация промышленности
+        id = jap_5
+        icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility
+        x = -1
+        y = 3
+        cost = 5
+        prerequisite = {focus = jap_4}
+        mutually_exclusive = {
+            focus = jap_6
+        }
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+				level = 2
+				instant_build = yes
+            }
+            add_building_construction = {
+                type = arms_factory
+				level = 3
+				instant_build = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+        focus = {
+            #Следить за счетами Дзайбацу
+            id = jap_8
+            icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility
+            x = -1
+            y = 4
+            cost = 5
+            prerequisite = {focus = jap_5}
+            mutually_exclusive = {
+                focus = jap_6
+            }
+            completion_reward = {
+                
+            }
+    
+            ai_will_do = {
+                factor = 2
+            }
+            }
+
+    focus = {
+        #Поощирать Дзайбацу
+        id = jap_6
+        icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility
+        x = 1
+        y = 3
+        cost = 5
+        prerequisite = {focus = jap_4}
+        mutually_exclusive = {
+            focus = jap_5
+        }
+        completion_reward = {
+
+            
+
+        }
+
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+        focus = {
+            #Новые филиалы в Осаке
+            id = jap_7
+            icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility
+            x = 1
+            y = 4
+            cost = 5
+            prerequisite = {focus = jap_4}
+            mutually_exclusive = {
+                focus = jap_6
+            }
+            completion_reward = {
+    
+                add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+    
+            }
+    
+            ai_will_do = {
+                factor = 2
+            }
+            }    
+
+
+        
 }
