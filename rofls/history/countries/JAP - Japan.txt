@@ -522,6 +522,7 @@ recruit_character = JAP_nobutake_kondo
 recruit_character = JAP_takeo_takagi
 recruit_character = JAP_soemu_toyoda
 recruit_character = JAP_jisaburo_ozawa
+recruit_character = JAP_nobusuke_kishi
 recruit_character = JAP_zengo_yoshida
 recruit_character = JAP_hiroaki_abe
 recruit_character = JAP_tadashige_daigo
@@ -723,6 +724,13 @@ IF = {
 			}
 			obsolete = yes
 		}	
+
+	
+	}
+
+set_power_balance = {
+	id = JAP_japan_balance
+	set_value = -0.2
 }
 IF = {
 	limit = {

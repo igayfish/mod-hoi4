@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	# leaders we need to override in DLC go in this file
+
+	spriteType = {
+		name = "GFX_nobusuke_kishi"
+		texturefile = "gfx/leaders/JAP/nobusuke_kishi.png"
+	}
+
+}

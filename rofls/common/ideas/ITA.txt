@@ -83,39 +83,14 @@ ideas = {
 			}
 
 			removal_cost = -1
-			picture = ETH_italian_settlers
+			picture = hermann_gortz
 
 			modifier = {
-				army_org_factor = -0.10
+				army_org_factor = -0.75
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10
 				planning_speed = -0.15
 			}
 		}
 	}
-	
-
-
-country = {
-	ideas80 = {
-
-		allowed = {
-			always = yes
-		}
-
-		allowed_civil_war = {
-			always = yes
-		}
-
-		removal_cost = -1
-		picture = FRA_national_mobilization_focus
-
-		modifier = {
-			army_org_factor = 0.15
-			army_attack_factor = 0.10
-			army_defence_factor = 0.10
-			planning_speed = 0.15
-		}
-	  }
-   }
-}
+}	
