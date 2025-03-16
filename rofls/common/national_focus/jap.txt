@@ -70,7 +70,7 @@ focus_tree = {
         }
 
     focus = {
-        #Укрепление Ганбацу
+        #Усиление Военных в правительстве
         id = jap_16
         icon = GFX_focus_GER_befriend_japan
         x = 24
@@ -81,30 +81,279 @@ focus_tree = {
             focus = jap_2
         }
         completion_reward = {
-            country_event = japan.102
+            add_stability = -0.05
+            army_experience = 10
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+        
+    focus = {
+        #Введение цензуры в СМИ и газеты
+        id = jap_17
+        icon = GFX_focus_GER_befriend_japan
+        x = 24
+        y = 3
+        cost = 5
+        prerequisite = {focus = jap_16}
+        completion_reward = {
+            add_stability = -0.05
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+    focus = {
+        #Введение пропаганды в начальные и средние школы
+        id = jap_18
+        icon = GFX_focus_GER_befriend_japan
+        x = 22
+        y = 4
+        cost = 5
+        prerequisite = {focus = jap_17}
+        completion_reward = {
+            add_timed_idea = {
+                idea = propagand
+                days = 365
+            }
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        
+    }
+
+    focus = {
+        #Отстранить Императора от Внешней политики
+        id = jap_19
+        icon = GFX_focus_GER_befriend_japan
+        x = 22
+        y = 5
+        cost = 5
+        prerequisite = {focus = jap_18}
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+    focus = {
+        #Подтвердить наши Притензии На Азию
+        id = jap_20
+        icon = GFX_focus_GER_befriend_japan
+        x = 24
+        y = 4
+        cost = 5
+        prerequisite = {focus = jap_17}
+        completion_reward = {
+            add_state_claim = 671 
+            add_state_claim = 741 
+            add_state_claim = 286
+            add_state_claim = 670  
+            add_state_claim = 336
+            add_state_claim = 333
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    
+    focus = {
+        #Образовать "Восточноазиатская Сфера Сопроцветания"
+        id = jap_21
+        icon = GFX_focus_GER_befriend_japan
+        x = 24
+        y = 5
+        cost = 5
+        prerequisite = {focus = jap_20}
+        completion_reward = {
+            create_faction = "Восточноазиатская Сфера Сопроцветания"
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+        
+    focus = {
+        #Тотальная Война
+        id = jap_22
+        icon = GFX_focus_GER_befriend_japan
+        x = 22
+        y = 6
+        cost = 5
+        prerequisite = {focus = jap_21}
+        completion_reward = {
+            add_ideas = totaler_krieg_economy
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+    focus = {
+        #Отряд 731
+        id = jap_23
+        icon = GFX_focus_GER_befriend_japan
+        x = 22
+        y = 7
+        cost = 5
+        prerequisite = {focus = jap_22}
+        completion_reward = {
+            add_ideas = squad_731
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+    focus = {
+        #Установить жестокий контроль над Китаем
+        id = jap_24
+        icon = GFX_focus_GER_befriend_japan
+        x = 22
+        y = 8
+        cost = 5
+        prerequisite = {focus = jap_23}
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
+    focus = {
+        #Взгляд на Юг
+        id = jap_25
+        icon = GFX_focus_GER_befriend_japan
+        x = 20
+        y = 7
+        cost = 5
+        prerequisite = {focus = jap_22}
+        completion_reward = {
+
         }
         ai_will_do = {
             factor = 2
         }
         }
     focus = {
-        #
-        id = jap_16
+        #Уничтожить Западную Угрозу
+        id = jap_30
         icon = GFX_focus_GER_befriend_japan
-        x = 24
-        y = 2
+        x = 18
+        y = 7
         cost = 5
-        prerequisite = {focus = jap_3}
-        mutually_exclusive = {
-            focus = jap_2
-        }
+        prerequisite = {focus = jap_22}
         completion_reward = {
-            country_event = japan.102
+
         }
         ai_will_do = {
             factor = 2
         }
-        }       
+        }
+
+    focus = {
+        #"Освободить" Народы от Западного Колониализма
+        id = jap_26
+        icon = GFX_focus_GER_befriend_japan
+        x = 20
+        y = 8
+        cost = 5
+        prerequisite = {focus = jap_25}
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Тотальная Национализация Промышленности
+        id = jap_27
+        icon = GFX_focus_GER_befriend_japan
+        x = 21
+        y = 9
+        cost = 5
+        prerequisite = {focus = jap_26 focus = jap_24}
+
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Бороться до победного конца
+        id = jap_28
+        icon = GFX_focus_GER_befriend_japan
+        x = 21
+        y = 10
+        cost = 5
+        prerequisite = {focus = jap_27}
+
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Эксплуатировать южные Ресурсы 
+        id = jap_29
+        icon = GFX_focus_GER_befriend_japan
+        x = 19
+        y = 9
+        cost = 5
+        prerequisite = {focus = jap_26}
+
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Програма Паназиатского Сотрудничества
+        id = jap_31
+        icon = GFX_focus_GER_befriend_japan
+        x = 19
+        y = 10
+        cost = 5
+        prerequisite = {focus = jap_29}
+
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+    focus = {
+        #Запрет Западных ценностей
+        id = jap_32
+        icon = GFX_focus_GER_befriend_japan
+        x = 18
+        y = 8
+        cost = 5
+        prerequisite = {focus = jap_30}
+
+        completion_reward = {
+
+        }
+        ai_will_do = {
+            factor = 2
+        }
+        }
+
 
     focus = {
         #Дзайбацу
@@ -116,7 +365,6 @@ focus_tree = {
         available = {has_completed_focus = jap_3} 
         prerequisite = {}
         completion_reward = {
-        
         }
 
         ai_will_do = {

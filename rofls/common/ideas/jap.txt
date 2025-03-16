@@ -22,11 +22,10 @@ ideas = {
 				army_defence_factor = -0.15
 			}
 		}
-	}
+	
 
 	#ЭКОНОМИЧЕСКИЙ СТАРТОВЫЙ
 
-	country = {
 		jap_ideas2 = {
 			allowed = {
 				always = yes
@@ -47,9 +46,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 			}
 		}
-	}
-
-	country = {
 		#Дзайбацу после национализации
 		jap_ideas4 = {
 			allowed = {
@@ -71,9 +67,8 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 			}
 		}
-	}
 
-	country = {
+
 		#Дзайбацу после проверки счетов
 		jap_ideas6 = {
 			allowed = {
@@ -95,9 +90,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 			}
 		}
-	}
-
-	country = {
 		#Дзайбацу после поддержки компаний
 		jap_ideas7 = {
 			allowed = {
@@ -118,9 +110,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.07
 			}
 		}
-	}
 
-	country = {
 		#Поощерение дзайбацу
 		jap_ideas8 = {
 			allowed = {
@@ -142,9 +132,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 			}
 		}
-	}
 
-	country = {
 		#Филиалы в Осаке
 		jap_ideas9 = {
 			allowed = {
@@ -165,9 +153,8 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 			}
 		}
-	}
+	
 
-	country = {
 		#Контракт с Дазйбацу
 		jap_ideas10 = {
 			allowed = {
@@ -189,8 +176,24 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.10
 			}
 		}
-	}
-	country = {
+
+		#Пропаганда В школах
+		propagand = {
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = jap_zaibatsu
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+	
 		#Мобилизация экономики по договору с дзайбацу
 		jap_ideas13 = {
 			allowed = {
@@ -211,9 +214,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-	}
 
-	country = {
 		#Мобилизация экономики по контролю дзайбацу
 		jap_ideas14 = {
 			allowed = {
@@ -233,11 +234,9 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
-	}
 
     #НУ ТУПЫЕ
 
-	country = {
 		jap_ideas3 = {
 			allowed = {
 				always = yes
@@ -250,9 +249,7 @@ ideas = {
 				research_speed_factor = -0.1
 			}
 		}
-	}
 
-	country = {
 		#Финансиоровать Институты Наук
 		jap_ideas11 = {
 			allowed = { always = yes } 
@@ -263,11 +260,9 @@ ideas = {
 				research_speed_factor = -0.05
 			}
 		}
-	}
 
-	country = {
 		#Токийский Университет 
-		jap_ideas12z = {
+		jap_ideas12 = {
 			allowed = { always = yes } 
     		cancel = { always = yes } 
 			picture = jap_duplicate_research
@@ -276,7 +271,31 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		squad_731 = {
+			allowed = {
+				always = yes
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+			picture = jap_zaibatsu
+	
+			modifier = {
+				research_speed_factor = 0.15
+				every_owned_state = {
+					limit = {
+						# Проверяем, что оригинальный владелец штата — Китай (CHI)
+						original_owner = CHI
+					}
+					add_state_modifier = {
+						name = chinese_territory_oppression
+						duration = -1  # Бессрочно
+					}
+				}
+			}
+		}
 	}
-
-
 }
