@@ -1,0 +1,262 @@
+jap_eco_category = {
+	jap_eco_one = {
+		icon = GFX_decision_eng_imperial_federation
+		available = {
+			tag = JAP
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			tag = JAP
+		}
+		
+
+		modifier = {
+			consumer_goods_factor = 0.15
+			political_power_cost = 0.2
+		}
+		days_remove = 50
+
+		allowed = {
+			
+		}
+
+		remove_effect = {
+				536 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+		}
+
+		complete_effect = {
+		
+		}
+	}
+
+jap_eco_two = {
+	icon = GFX_decision_ger_reichskommissariats
+	available = {
+		tag = JAP
+	}
+	cost = 50
+	fire_only_once = yes
+	visible = {
+		tag = JAP
+	}
+
+	modifier = {
+		consumer_goods_factor = 0.15
+		political_power_cost = 0.2
+	}
+	days_remove = 50
+
+	allowed = {
+		
+	}
+
+	remove_effect = {
+		530 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+			}	
+		}
+	}
+}
+
+jap_eco_three = {
+	icon = GFX_decision_ger_military_buildup
+	available = {
+		tag = JAP
+	}
+	cost = 50
+	fire_only_once = yes
+	visible = {
+		tag = JAP
+	}
+
+	modifier = {
+		consumer_goods_factor = 0.15
+		political_power_cost = 0.2
+	}
+	days_remove = 50
+
+	allowed = {
+		
+	}
+
+	remove_effect = {
+		535 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+		}
+		}
+	}
+}
+
+jap_eco_four = {
+	icon = GFX_decision_generic_factory
+	available = {
+		tag = JAP
+	}
+	cost = 50
+	fire_only_once = yes
+	visible = {
+		tag = JAP
+	}
+
+	modifier = {
+		consumer_goods_factor = 0.1
+		political_power_cost = 0.2
+	}
+	days_remove = 50
+
+	allowed = {
+		
+	}
+
+	remove_effect = {
+		528 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 2
+			}
+		}	
+	}	
+}
+
+jap_eco_five = {
+    icon = GFX_decision_generic_consumer_goods
+    available = {
+        tag = JAP
+    }
+    cost = 50
+    fire_only_once = no
+    visible = {
+        tag = JAP
+    }
+
+    modifier = {
+        production_speed_buildings_factor = -0.05
+        consumer_goods_factor = 0.05
+		political_power_cost = 0.2
+    }
+    days_remove = 1
+
+    allowed = {
+        tag = JAP
+    }
+
+    remove_effect = {
+			535 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+       				 }
+			}
+
+			530 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+			}
+
+			526 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+       				 }
+			}
+
+			645 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+       				 }
+			}
+
+    	}
+	}
+
+	jap_eco_six = {
+		icon = GFX_decision_generic_construction
+		available = {
+			tag = JAP
+		}
+		cost = 65
+		fire_only_once = no
+		visible = {
+			tag = JAP
+		}
+	
+		modifier = {
+			production_speed_buildings_factor = -0.05
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.2
+		}
+		days_remove = 80
+	
+		allowed = {
+			tag = JAP
+		}
+	
+		remove_effect = {
+				534 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+							}
+				}
+	
+				533 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+						}
+				}
+	
+				536 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+							}
+				}
+	
+				537 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+							}
+				}
+	
+				555 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+							}
+				}
+
+			}
+	}
+}

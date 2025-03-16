@@ -1,0 +1,8 @@
+jap_war_category = {
+	icon = GFX_decision_eng_imperial_federation
+	priority = 90
+	visible_when_empty = yes
+	allowed = {
+		original_tag = JAP
+	}
+}
