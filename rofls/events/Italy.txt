@@ -30,11 +30,9 @@ country_event = {
 	title = italy.70.t
 	desc = italy.70.d
 	picture = GFX_report_event_physics_lab_02
+	
+	is_triggered_only = yes
 
-	trigger = {
-		tag = ITA
-		has_completed_focus = ITA_diplomacy1
-	}
 	option =  {
 		name = ital.70.1
 		add_stability = -0.05
@@ -88,4 +86,19 @@ country_event = {
 		add_ideas = ideas70
 
 	}
+}
+
+country_event = {
+    id = italy.73
+    title = italy.73.t
+    desc = italy.73.d
+    picture = GFX_report_event_SWE_defense_act
+
+    is_triggered_only = yes
+
+    option =  {
+        name = ital.73.1
+        remove_ideas = ideas70
+		add_timed_idea = { idea = ideas80 days = 60 }
+    }
 }

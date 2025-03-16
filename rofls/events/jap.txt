@@ -9,11 +9,9 @@ country_event = {
 	id = japan.100
 	title = japan.100.t
 	desc = japan.100.d
-	picture = GFX_report_event_japanese_transport_soldiers
-
+	picture = GFX_report_event_test_event1
 	trigger = {
 		tag = JAP
-		has_completed_focus = jap_1
 	}
 	option = {
 		name = japan.100.a
@@ -29,7 +27,6 @@ country_event = {
 	picture = GFX_report_event_albanian_king_zog
 	trigger = {
 		tag = JAP
-		has_completed_focus = jap_2
 	}
 	option = {
 		name = japan.101.a
@@ -48,11 +45,78 @@ country_event = {
 
 	trigger = {
 		tag = JAP
-		has_completed_focus = jap_3
 	}
 	option = {
 		name = japan.102.a
 		add_political_power = 150
 		add_war_support  = 0.05
+	}
+}
+
+#РЕШЕНИЕ НА ВОЙНУ С ЮСОЙ
+
+country_event = {
+	id = japan.103
+	title = japan.103.t
+	desc = japan.103.d
+	picture = GFX_report_event_albanian_king_zog
+	trigger = {
+		tag = JAP
+	}
+	option = {
+		name = japan.103.a
+			damage_building = {
+				province = 7112 
+				type = coastal_bunker
+				damage = 3
+			}
+
+			damage_building = {
+				province = 4180  
+				type = coastal_bunker
+				damage = 3
+			}
+
+			damage_building = {
+				province = 7195   
+				type = coastal_bunker
+				damage = 3
+			}
+
+			damage_building = {
+				province = 10048    
+				type = coastal_bunker
+				damage = 3
+			}
+
+			damage_building = {
+				province = 12021    
+				type = coastal_bunker
+				damage = 3
+			}
+
+			damage_building = {
+				province = 4180  
+				type = naval_base
+				damage = 6
+			}
+
+			damage_building = {
+				state = 629  
+				type = anti_air_building
+				damage = 3
+			}
+
+			damage_building = {
+				state = 629  
+				type = air_base
+				damage = 5
+			}
+
+			damage_building = {
+				state = 629  
+				type = radar_station
+				damage = 2
+			}
 	}
 }
